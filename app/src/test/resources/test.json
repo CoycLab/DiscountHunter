@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "name": "Computer",
+      "description": "Computer. Cool computer",
+      "price": "5.95",
+      "discount": "10",
+      "from_date": 1505174400000,
+      "since_date": 1511049600000,
+      "seller": {
+        "seller_name": "Columbia",
+        "shop_list": [
+          {
+            "address": "Solomovoy, 80",
+            "working_time": "09.00 - 23.00"
+          },
+          {
+            "address": "Chaykinoy, 10",
+            "working_time": "09.00 - 23.00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TV",
+      "description": "Flat TV",
+      "price": "150.00",
+      "discount": "20",
+      "from_date": 1505174400000,
+      "since_date": 1511049600000,
+      "seller": {
+        "seller_name": "Fifth Element",
+        "shop_list": [
+          {
+            "address": "Solomovoy, 80",
+            "working_time": "09.00 - 23.00"
+          },
+          {
+            "address": "Chaykinoy, 10",
+            "working_time": "09.00 - 23.00"
+          }
+        ]
+      }
+    }
+  ]
+}
