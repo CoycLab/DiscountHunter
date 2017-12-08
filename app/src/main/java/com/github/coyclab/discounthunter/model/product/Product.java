@@ -11,6 +11,8 @@ public class Product implements IProduct {
     private static final String DESCRIPTION = "description";
     private static final String PRICE = "price";
     private static final String DISCOUNT = "discount";
+    private static final String IMAGE = "image";
+    private static final String CATEGORY = "category";
     private static final String FROM_DATE = "from_date";
     private static final String SINCE_DATE = "since_date";
     private static final String SELLER = "seller";
@@ -26,6 +28,12 @@ public class Product implements IProduct {
 
     @SerializedName(DISCOUNT)
     private int mDiscount;
+
+    @SerializedName(IMAGE)
+    private String mImage;
+
+    @SerializedName(CATEGORY)
+    private int mCategory;
 
     @SerializedName(FROM_DATE)
     private Date mFromDate;
@@ -54,6 +62,16 @@ public class Product implements IProduct {
     @Override
     public int getDiscount() {
         return mDiscount;
+    }
+
+    @Override
+    public String getImage() {
+        return mImage;
+    }
+
+    @Override
+    public int getCategory() {
+        return mCategory;
     }
 
     @Override

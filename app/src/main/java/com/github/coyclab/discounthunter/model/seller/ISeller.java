@@ -9,4 +9,6 @@ public interface ISeller {
     String getName();
 
     List<Shop> getShopList();
+
+    String getSellerLogo();
 }

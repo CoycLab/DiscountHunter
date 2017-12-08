@@ -15,6 +15,9 @@ import java.io.Reader;
 import java.lang.reflect.Type;
 import java.util.Date;
 
+import static android.support.v4.os.LocaleListCompat.create;
+import static java.lang.Integer.valueOf;
+
 public class ProductListParser implements IProductListParser {
 
     private final InputStream mInputStream;

@@ -14,9 +14,15 @@ public interface IProduct {
 
     int getDiscount();
 
+    String getImage();
+
+    int getCategory();
+
     Date getFromDate();
 
     Date getSinceDate();
 
     Seller getSeller();
+
+
 }

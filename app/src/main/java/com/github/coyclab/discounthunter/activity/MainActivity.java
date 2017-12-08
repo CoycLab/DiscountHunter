@@ -1,9 +1,9 @@
 package com.github.coyclab.discounthunter.activity;
 
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-        import com.github.coyclab.discounthunter.R;
+import com.github.coyclab.discounthunter.R;
 
 public class MainActivity extends AppCompatActivity {
 

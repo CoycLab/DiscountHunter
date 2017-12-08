@@ -8,13 +8,18 @@ import java.util.List;
 public class Seller implements ISeller {
 
     private static final String SELLER_NAME = "seller_name";
+    private static final String SELLER_LOGO = "seller_logo";
     private static final String SHOP_LIST = "shop_list";
+
 
     @SerializedName(SELLER_NAME)
     private String mName;
 
     @SerializedName(SHOP_LIST)
     private List<Shop> mShopList;
+
+    @SerializedName(SELLER_LOGO)
+    private String mSellerLogo;
 
     @Override
     public String getName() {
@@ -24,5 +29,10 @@ public class Seller implements ISeller {
     @Override
     public List<Shop> getShopList() {
         return mShopList;
+    }
+
+    @Override
+    public String getSellerLogo() {
+        return mSellerLogo;
     }
 }

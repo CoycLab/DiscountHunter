@@ -5,10 +5,13 @@
       "description": "Computer. Cool computer",
       "price": "5.95",
       "discount": "10",
+      "image": "http://slavdvor.ru/img/b2ap3_thumbnail_akson-logo.png",
+      "category": 1,
       "from_date": 1505174400000,
       "since_date": 1511049600000,
       "seller": {
         "seller_name": "Columbia",
+        "seller_logo": "https://im0-tub-by.yandex.net/i?id=85788cae39bbe61ef2767891241986ae-sr&n=13",
         "shop_list": [
           {
             "address": "Solomovoy, 80",
@@ -26,10 +29,13 @@
       "description": "Flat TV",
       "price": "150.00",
       "discount": "20",
+      "image": "http://slavdvor.ru/img/b2ap3_thumbnail_akson-logo.png",
+      "category": 6,
       "from_date": 1505174400000,
       "since_date": 1511049600000,
       "seller": {
         "seller_name": "Fifth Element",
+        "seller_logo": "https://im0-tub-by.yandex.net/i?id=85788cae39bbe61ef2767891241986ae-sr&n=13",
         "shop_list": [
           {
             "address": "Solomovoy, 80",

@@ -3,8 +3,8 @@ package com.github.coyclab.discounthunter;
 import com.github.coyclab.discounthunter.http.IHttpClient;
 import com.github.coyclab.discounthunter.mocks.Mocks;
 import com.github.coyclab.discounthunter.model.ProductListParser;
-
 import com.github.coyclab.discounthunter.model.product.IProductList;
+import com.github.coyclab.discounthunter.utils.Category;
 import com.github.coyclab.discounthunter.utils.Constants;
 
 import org.junit.Before;
@@ -29,6 +29,8 @@ public class ProductListParserTest {
     private static final String EXPECTED_NAME = "Computer";
     private static final double EXPECTED_PRICE = 5.95;
     private static final String EXPECTED_ADDRESS = "Solomovoy, 80";
+    private static final String EXPECTED_IMAGE_URL = "http://slavdvor.ru/img/b2ap3_thumbnail_akson-logo.png";
+    private static final String EXPECTED_LOGO_URL = "https://im0-tub-by.yandex.net/i?id=85788cae39bbe61ef2767891241986ae-sr&n=13";
 
     private IHttpClient mHttpClient;
 
@@ -39,7 +41,7 @@ public class ProductListParserTest {
 
     @Test
     public void parseProductList() throws Exception {
-        final InputStream mockedInputStream = Mocks.stream(Constants.FILE_NAME);
+        final InputStream mockedInputStream = Mocks.stream(Constants.TEST_JSON_FILE_NAME);
         when(mHttpClient.request(anyString())).thenReturn(mockedInputStream);
         final InputStream response = mHttpClient.request(URL);
         final IProductList productList = new ProductListParser(response).parse();
@@ -54,5 +56,11 @@ public class ProductListParserTest {
                 .getShopList()
                 .get(0)
                 .getAddress(), EXPECTED_ADDRESS);
+
+        assertEquals(productList.getProductList().get(1).getImage(),EXPECTED_IMAGE_URL);
+        assertEquals(productList.getProductList().get(0).getSeller().getSellerLogo(),EXPECTED_LOGO_URL);
+
+        assertEquals(productList.getProductList().get(0).getCategory(), Category.FOOD);
+        assertEquals(productList.getProductList().get(1).getCategory(), Category.AUTO_GOODS);
     }
 }
