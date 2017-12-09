@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-database:11.6.2'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -37,6 +38,9 @@ dependencies {
 
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     testCompile 'junit:junit:4.12'
-    compile project(path: ':app_backend', configuration: 'android-endpoints')
+    compile project(path: ':backend', configuration: 'android-endpoints')
 
 }
+
+
+apply plugin: 'com.google.gms.google-services'
